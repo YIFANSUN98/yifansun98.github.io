@@ -158,7 +158,7 @@
       themeToggle.setAttribute('aria-pressed', String(isDark));
       themeToggle.setAttribute('aria-label', isDark ? 'Switch to light theme' : 'Switch to dark theme');
     }
-    if (themeMeta) themeMeta.content = isDark ? '#101614' : '#f5f2eb';
+    if (themeMeta) themeMeta.content = isDark ? '#11151c' : '#f6f7f9';
   }
 
   if (themeToggle) {
@@ -207,6 +207,25 @@
 
   const yearLabel = document.getElementById('current-year');
   if (yearLabel) yearLabel.textContent = String(new Date().getFullYear());
+
+  const visitorGlobe = document.getElementById('visitor-globe');
+  const visitorGlobeLive = document.getElementById('visitor-globe-live');
+
+  function syncVisitorGlobe() {
+    if (!visitorGlobe || !visitorGlobeLive) return;
+    const liveWidget = visitorGlobeLive.querySelector('canvas, iframe, img, object, embed, a');
+    const hasLiveWidget = Boolean(liveWidget);
+    visitorGlobe.classList.toggle('has-live-widget', hasLiveWidget);
+    visitorGlobeLive.setAttribute('aria-hidden', String(!hasLiveWidget));
+  }
+
+  if (visitorGlobeLive) {
+    syncVisitorGlobe();
+    const globeObserver = new MutationObserver(syncVisitorGlobe);
+    globeObserver.observe(visitorGlobeLive, { childList: true, subtree: true });
+    window.setTimeout(syncVisitorGlobe, 1200);
+    window.setTimeout(syncVisitorGlobe, 4000);
+  }
 
   const revealElements = document.querySelectorAll('.hero-media, .hero-copy, .section-heading, .publication-card, .visitor-card');
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
