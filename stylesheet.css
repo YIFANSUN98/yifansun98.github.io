@@ -711,8 +711,8 @@ input:focus-visible {
 
 .visitor-card {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(220px, 330px);
-  gap: 36px;
+  grid-template-columns: minmax(260px, 1fr) minmax(420px, 600px);
+  gap: clamp(30px, 5vw, 64px);
   align-items: center;
   margin: 0 0 100px;
   padding: clamp(26px, 4vw, 48px);
@@ -729,89 +729,37 @@ input:focus-visible {
   line-height: 1.03;
 }
 
-.visitor-card p:not(.eyebrow) {
-  max-width: 630px;
-  margin: 16px 0 0;
-  color: var(--muted);
-  font-size: 0.88rem;
-}
-
-.visitor-globe {
-  position: relative;
+.visitor-map {
   display: grid;
-  min-height: 260px;
-  place-items: center;
-  isolation: isolate;
+  gap: 12px;
+  justify-items: start;
 }
 
-.globe-fallback {
-  display: grid;
-  width: min(100%, 260px);
-  aspect-ratio: 1;
-  place-items: center;
-  opacity: 1;
-  transition: opacity 180ms ease, visibility 180ms ease;
+.visitor-map-image {
+  display: block;
+  width: min(100%, 600px);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  background: #fff;
 }
 
-.globe-fallback svg {
+.visitor-map-image:hover {
+  border-color: var(--line-strong);
+  transform: translateY(-1px);
+}
+
+.visitor-map-image img {
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 
-.globe-ocean {
-  fill: var(--bg-soft);
-}
-
-.globe-grid {
-  fill: none;
-  stroke: var(--line-strong);
-  stroke-width: 1;
-}
-
-.globe-land {
-  fill: color-mix(in srgb, var(--link) 18%, var(--surface-strong));
-  stroke: color-mix(in srgb, var(--link) 70%, var(--ink));
-  stroke-linejoin: round;
-  stroke-width: 1.2;
-}
-
-.globe-visitors circle {
-  fill: var(--accent);
-  stroke: var(--surface-strong);
-  stroke-width: 2;
-}
-
-.globe-outline {
-  fill: none;
-  stroke: var(--ink-soft);
-  stroke-width: 2;
-}
-
-.visitor-globe-live {
-  position: absolute;
-  z-index: 2;
-  inset: 0;
-  display: grid;
-  place-items: center;
-  pointer-events: none;
-}
-
-.visitor-globe-live canvas,
-.visitor-globe-live iframe,
-.visitor-globe-live img,
-.visitor-globe-live object,
-.visitor-globe-live embed {
-  max-width: 100% !important;
-  max-height: 100% !important;
-}
-
-.visitor-globe.has-live-widget .globe-fallback {
-  visibility: hidden;
-  opacity: 0;
-}
-
-.visitor-globe.has-live-widget .visitor-globe-live {
-  pointer-events: auto;
+.visitor-stats-link {
+  color: var(--ink-soft);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-color: var(--line-strong);
 }
 
 .site-footer {
@@ -898,6 +846,10 @@ input:focus-visible {
 
   .publication-count {
     display: none;
+  }
+
+  .visitor-card {
+    grid-template-columns: 1fr;
   }
 }
 
