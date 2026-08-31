@@ -1,65 +1,28 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
+<!doctype html>
+<html lang="en">
 
 <head>
-  <meta name="generator" content="HTML Tidy for Linux/x86 (vers 11 February 2007), see www.w3.org">
-  <style type="text/css">
-  /* Design Credits: Jon Barron and Deepak Pathak and Abhishek Kar and Saurabh Gupta and Tairan He*/
-  a {
-  color: #1772d0;
-  text-decoration:none;
-  }
-  a:focus, a:hover {
-  color: #f09228;
-  text-decoration:none;
-  }
-  body,td,th {
-    font-family: 'Titillium Web', Verdana, Helvetica, sans-serif;
-    font-size: 16px;
-    font-weight: 400
-  }
-  heading {
-    font-family: 'Titillium Web', Verdana, Helvetica, sans-serif;
-    font-size: 17px; /* 19 */
-    font-weight: 600 /* 1000 */
-  }
-  hr
-  {
-    border: 0;
-    height: 1px;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
-  }
-  strong {
-    font-family: 'Titillium Web', Verdana, Helvetica, sans-serif;
-    font-size: 16px;
-    font-weight: 600 /* 800 */
-  }
-  strongred {
-    font-family: 'Titillium Web', Verdana, Helvetica, sans-serif;
-    color: 'red' ;
-    font-size: 16px
-  }
-  sectionheading {
-    font-family: 'Titillium Web', Verdana, Helvetica, sans-serif;
-    font-size: 22px;
-    font-weight: 600
-  }
-  pageheading {
-    font-family: 'Titillium Web', Verdana, Helvetica, sans-serif;
-    font-size: 38px;
-    font-weight: 400
-  }
-  .ImageBorder
-  {
-      border-width: 1px;
-      border-color: Black;
-  }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f3ed">
   <link rel="shortcut icon" href="images/ri-new-mark-512-512-transparent.png">
   <script type="text/javascript" src="js/hidebib.js"></script>
-  <title>Yifan Sun</title>
-  <meta name="Yifan Sun's Homepage" http-equiv="Content-Type" content="Yifan Sun's Homepage">
-  <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,600,400italic,600italic,300,300italic' rel='stylesheet' type='text/css'>
+  <title>Yifan Sun · Robotics Researcher</title>
+  <meta name="description" content="Yifan Sun is a Robotics Ph.D. student at Carnegie Mellon University researching safe learning, control, and humanoid robotics.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="stylesheet.css">
+  <script>
+    try {
+      const savedTheme = localStorage.getItem('theme');
+      const preferredTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      document.documentElement.dataset.theme = savedTheme || preferredTheme;
+    } catch (error) {
+      document.documentElement.dataset.theme = 'light';
+    }
+  </script>
+  <script src="js/site.js" defer></script>
   <!-- Start : Google Analytics Code -->
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -70,77 +33,175 @@
     ga('send', 'pageview');
     </script>
   <!-- End : Google Analytics Code -->
-  <!-- Scramble Script by Jeff Donahue -->
-  <script src="js/scramble.js"></script>
 </head>
  
 <body>
-<table width="900" border="0" align="center" border="0" cellspacing="0" cellpadding="20">
-  <tr><td>
+  <div class="reading-progress" aria-hidden="true"><span></span></div>
 
-<table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-  <p align="center">
-    <pageheading>Yifan Sun 孙逸凡</pageheading><br>
-  </p>
+  <header class="topbar">
+    <nav class="nav-shell" aria-label="Primary navigation">
+      <a class="brand" href="#top" aria-label="Yifan Sun, back to top">
+        <span class="brand-mark">YS</span>
+        <span>Yifan Sun</span>
+      </a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#publications">Publications</a>
+        <a href="data/Yifan_CV_Academic_08312026.pdf">CV</a>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch color theme" aria-pressed="false">
+          <span class="theme-icon theme-icon-light" aria-hidden="true">☼</span>
+          <span class="theme-icon theme-icon-dark" aria-hidden="true">☾</span>
+        </button>
+      </div>
+    </nav>
+  </header>
 
+  <main class="site-shell" id="top">
+    <section class="hero" id="about" aria-labelledby="hero-title">
+      <div class="hero-media">
+        <a href="images/YifanPhoto.jpg" aria-label="Open portrait of Yifan Sun">
+          <img src="images/YifanPhoto.jpg" alt="Portrait of Yifan Sun">
+        </a>
+      </div>
+
+      <div class="hero-copy">
+        <p class="eyebrow">Safe autonomy · Humanoid robotics</p>
+        <h1 id="hero-title">Yifan Sun <span lang="zh-Hans">孙逸凡</span></h1>
+        <p class="hero-lede">I build intelligent decision-making and motion-control methods that help complex robots act safely in dynamic, contact-rich environments.</p>
+
+        <div class="hero-bio">
+          <p>I am a third-year Ph.D. student in the <a href="https://icontrol.ri.cmu.edu">Intelligent Control Lab</a> at Carnegie Mellon University's <a href="https://www.ri.cmu.edu">Robotics Institute</a>, advised by <a href="https://www.ri.cmu.edu/ri-faculty/changliu-liu/">Changliu Liu</a>.</p>
+          <p>I received my B.S. in Mechanical Engineering from <a href="https://en.xjtu.edu.cn/">Xi'an Jiaotong University</a> and my M.S. in Mechanical Engineering from Carnegie Mellon University. I have also completed research and engineering internships at <a href="https://zoox.com/">Zoox</a>, <a href="https://www.siemens.com/">Siemens</a>, and <a href="https://www.instinct-robotics.com/">Instinct Robotics</a>.</p>
+        </div>
+
+        <div class="hero-actions" aria-label="Profile links">
+          <a class="button button-primary" href="data/Yifan_CV_Academic_08312026.pdf">View CV <span aria-hidden="true">↗</span></a>
+          <a class="button" href="https://scholar.google.com/citations?user=DGhQSYUAAAAJ&amp;hl=en">Google Scholar</a>
+          <a class="button" href="mailto:yifansu2@andrew.cmu.edu">Email</a>
+        </div>
+
+        <div class="social-links">
+          <a href="https://github.com/YIFANSUN98">GitHub</a>
+          <a href="https://www.linkedin.com/in/yifansun1/">LinkedIn</a>
+          <a href="https://twitter.com/YifanSun98">X / Twitter</a>
+        </div>
+
+        <div class="research-focus" aria-label="Research areas">
+          <span>Safe learning &amp; control</span>
+          <span>Humanoid safety</span>
+          <span>Dexterous interaction</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="publication-section" id="publications" aria-labelledby="publication-title">
+      <div class="section-heading">
+        <div>
+          <h2 id="publication-title">Publications</h2>
+        </div>
+      </div>
+
+      <div class="publication-toolbar" aria-label="Publication filters">
+        <label class="search-field" for="publication-search">
+          <span aria-hidden="true">⌕</span>
+          <input id="publication-search" type="search" placeholder="Search publications" autocomplete="off">
+        </label>
+        <div class="filter-group" role="group" aria-label="Filter publications by year">
+          <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">All</button>
+          <button class="filter-button" type="button" data-filter="2026" aria-pressed="false">2026</button>
+          <button class="filter-button" type="button" data-filter="2025" aria-pressed="false">2025</button>
+          <button class="filter-button" type="button" data-filter="earlier" aria-pressed="false">Earlier</button>
+        </div>
+        <p class="publication-count" id="publication-count" aria-live="polite"></p>
+      </div>
+
+      <table class="publication-list" width="100%" align="center" border="0" cellspacing="0" cellpadding="15">
+
+  <!-- Safe-Stoppability -->
   <tr>
-    <td width="30%" valign="top"><a href="images/YifanPhoto.jpg"><img src="images/YifanPhoto.jpg" width="100%" style="border-radius:15px"></a>
-    <p align=center>
-    | <a href="data/Yifan_CV_Academic_09152025.pdf">CV</a> |
-    <a href="mailto: yifansu2@andrew.cmu.edu">Email</a> |
-    <a href="https://scholar.google.com/citations?user=DGhQSYUAAAAJ&hl=en">Google Scholar</a> |
-    <br/>
-    | <a href="https://github.com/YIFANSUN98">Github</a> | 
-    <a href="https://www.linkedin.com/in/yifansun1/">LinkedIn</a> |
-    </p>
-    <p align="center">
-      <a href="https://twitter.com/YifanSun98?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @YifanSun98</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-    </p> 
+    <td width="40%" valign="top" align="center">
+      <a href="https://arxiv.org/pdf/2603.22703">
+          <img src="images/stoppability/stoppability.gif" alt="Safe-Stoppability humanoid safety monitor demonstration" width="100%" style="padding-top:0px; padding-bottom:0px; border-radius:15px; height: auto;">
+      </a>
     </td>
-    <td width="70%" valign="top" align="justify">
-      <p>I am a second-year Ph.D. student in the <a href="http://icontrol.ri.cmu.edu">Intelligent Control Lab</a> at the <a href="https://www.ri.cmu.edu">Robotics Institute</a> of <a href="https://www.cmu.edu">Carnegie Mellon University</a>, advised by <a href="http://icontrol.ri.cmu.edu/people/changliu.html">Changliu Liu</a>.</a>.
-      </p>
-      <p>My research focuses on developing intelligent decision making and motion control methods that enable complex robotic systems to perform tasks such as human–robot collaboration and dexterous manipulation, while satisfying critical constraints such as safety and contact-rich interactions.
-      </p>
-      <p>I received my Bachelor's degree in Mechanical Engineering at <a href="http://en.xjtu.edu.cn/">Xi'an Jiaotong University</a> and got my Masters's drgess in Mechanical Engineering at CMU. 
-      </p>
-      <p>I also had the pleasure of completing two summer internships at <a href="https://zoox.com/"> Zoox</a> and <a href="https://www.siemens.com/us/en.html?gclid=CjwKCAjw59q2BhBOEiwAKc0ijbLAsbTVBrGqt0c6VOFrFe_tD9yP6UCLV4Y-1cAXWJ-0ngmoKIEOxxoC810QAvD_BwE&acz=1&gad_source=1"> Siemens</a>.
+    <td width="60%" valign="top">
+      <p><a href="https://arxiv.org/pdf/2603.22703" id="STOPPABILITY">
+      <heading>Learning Safe-Stoppability Monitors for Humanoid Robots</heading></a><br>
+      <b>Yifan Sun</b>, Yiyuan Pan, Shangtao Li, Caiwu Ding, Tao Cui, Lingyun Wang, Changliu Liu<br>
+      IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), 2026<br>
       </p>
 
-        
-        <!-- <p>Goal: challenge conventional notions of what robots can achieve, develop robots that improves everyone's life. Focus: developing intelligent robots being able to do useful tasks with <u>intelligence, generalizability, agility and safety</u>. Method: learning-based methods that scale with the computation and data. Robots: Mobile robots, legged robots, robotic manipulators, and humanoid robots.
-      </p> -->
-      <!-- <p><strong>Goal:</strong> Robots that improve everyone's life.</p>
-      <p><strong>Focus:</strong> How to build the <u>data flywheel for robotics</u>? How to make robots perform useful tasks with <u>intelligence, generalizability, agility, and safety</u>?</p>
-      <p><strong>Method:</strong> Utilizing learning-based methods that scale with computation and data.</p>
-      <p><strong>Robots:</strong> I love working on humanoids and aim to make them capable of doing everything I can do—and more.</p> -->
-      <p>Email: yifansu2@andrew.cmu.edu
-      </p>
+      <div class="paper" id="stoppability">
+      <a href="https://intelligent-control-lab.github.io/humanoid_stoppability/">project</a> |
+      <a href="https://www.youtube.com/watch?v=qhbmATQcj2k">youtube</a> |
+      <a href="javascript:toggleblock('stoppability_abs')">abstract</a> |
+      <a shape="rect" href="javascript:togglebib('stoppability')" class="togglebib">bibtex</a> |
+      <a href="https://arxiv.org/pdf/2603.22703">arXiv</a>
+
+      <p align="justify"> <i id="stoppability_abs">Emergency stop (E-stop) mechanisms are the de facto standard for robot safety. However, for humanoid robots, abruptly cutting power can itself cause catastrophic failures; instead, an emergency stop must execute a predefined fallback controller that preserves balance and drives the robot toward a minimum-risk condition. This raises a critical question: from which states can a humanoid robot safely execute such a stop? In this work, we formalize emergency stopping for humanoids as a policy-dependent safe-stoppability problem and use data-driven approaches to characterize the safe-stoppable envelope. We introduce PRISM (Proactive Refinement of Importance-sampled Stoppability Monitor), a simulation-driven framework that learns a neural predictor for state-level stoppability. PRISM iteratively refines the decision boundary using importance sampling, enabling targeted exploration of rare but safety-critical states. This targeted exploration significantly improves data efficiency while reducing false-safe predictions under a fixed simulation budget. We further demonstrate sim-to-real transfer by deploying the pretrained monitor on a real humanoid platform. Results show that modeling safety as policy-dependent stoppability enables proactive safety monitoring and supports scalable certification of fail-safe behaviors for humanoid robots.</i></p>
+
+      <pre xml:space="preserve">
+        @inproceedings{sun2026learningsafestoppability,
+          title={Learning Safe-Stoppability Monitors for Humanoid Robots},
+          author={Sun, Yifan and Pan, Yiyuan and Li, Shangtao and Ding, Caiwu and Cui, Tao and Wang, Lingyun and Liu, Changliu},
+          booktitle={IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+          year={2026}
+        }
+      </pre>
+      </div>
     </td>
   </tr>
-</table>
 
-<hr/>
+  <!-- Lambda Reachability -->
+  <tr>
+    <td width="40%" valign="top" align="center">
+      <a href="https://arxiv.org/pdf/2606.16022">
+          <img src="images/lambda_reachability/lambda_reachability.gif" alt="Lambda-Reachability humanoid safety demonstration" width="100%" style="padding-top:0px; padding-bottom:0px; border-radius:15px; height: auto;">
+      </a>
+    </td>
+    <td width="60%" valign="top">
+      <p><a href="https://arxiv.org/pdf/2606.16022" id="LAMBDA_REACHABILITY">
+      <heading>&lambda;-Reachability: Geometric-Horizon Safety Bellman Equations for Humanoid Safety</heading></a><br>
+      Rui Chen, Shangtao Li, <b>Yifan Sun</b>, Changliu Liu<br>
+      Preprint, 2026<br>
+      </p>
 
-<table width="100%" align="center" border="0" cellspacing="0" cellpadding="10">
-  <tr><td><sectionheading>&nbsp;&nbsp;Publications</sectionheading></td></tr>
-</table>
+      <div class="paper" id="lambda_reachability">
+      <a href="https://icontrol.ri.cmu.edu/research/humanoid.html#lambda-reachability">project</a> |
+      <a href="https://shangtaoli.github.io/project/lambda_reach/video.mp4">video</a> |
+      <a href="https://github.com/intelligent-control-lab/lambda_reach">code</a> |
+      <a href="javascript:toggleblock('lambda_reachability_abs')">abstract</a> |
+      <a shape="rect" href="javascript:togglebib('lambda_reachability')" class="togglebib">bibtex</a> |
+      <a href="https://arxiv.org/pdf/2606.16022">arXiv</a>
 
+      <p align="justify"> <i id="lambda_reachability_abs">We introduce &lambda;-Reachability, a scalable approach to Hamilton--Jacobi safety analysis for high-dimensional robotic systems. Unlike prior discounted formulations that rely on fixed one-step Bellman updates, &lambda;-Reachability employs a stochastic multi-step estimator of the safety value, using a geometrically distributed rollout horizon together with a randomly absorbed terminal. Conceptually analogous to TD(&lambda;), &lambda;-Reachability interpolates between local self-consistency updates and long-horizon max-over-trajectory safety targets via an interpretable horizon-control parameter. Unlike TD(&lambda;), where the terminal value is always incorporated in learning targets, the terminal safety value in &lambda;-Reachability is only used at a probability controlled by parameter &delta;. We formally show that for &delta;&lt;1, the update induces a contraction mapping that allows temporal-difference learning; as &lambda;&rarr;1, the estimator recovers the undiscounted reachability objective. We apply &lambda;-Reachability to high-dimensional safety learning problems with both simulated and real humanoid robots under balance and collision avoidance constraints. Experimental results demonstrate that &lambda;-Reachability significantly improves both safe-set boundary classification and safety margin estimation compared to single-step temporal-difference baselines.</i></p>
 
-<table width="100%" align="center" border="0" cellspacing="0" cellpadding="15">
+      <pre xml:space="preserve">
+        @misc{chen2026lambdareachability,
+          title={{\lambda}-Reachability: Geometric-Horizon Safety Bellman Equations for Humanoid Safety},
+          author={Chen, Rui and Li, Shangtao and Sun, Yifan and Liu, Changliu},
+          year={2026},
+          eprint={2606.16022},
+          archivePrefix={arXiv},
+          primaryClass={cs.RO}
+        }
+      </pre>
+      </div>
+    </td>
+  </tr>
 
   <!-- SPARK -->
   <tr>
     <td width="40%" valign="top" align="center">
       <a href="https://arxiv.org/pdf/2502.03132">
-          <img src="images/spark/spark_real.gif" alt="sym" width="100%" style="padding-top:0px; padding-bottom:0px; border-radius:15px; height: auto;">
+          <img src="images/spark/spark_real.gif" alt="SPARK humanoid robot safety demonstration" width="100%" style="padding-top:0px; padding-bottom:0px; border-radius:15px; height: auto;">
       </a>
     </td>
     <td width="60%" valign="top">
       <p><a href="https://arxiv.org/pdf/2502.03132" id="SPARK">
-      <heading>SPARK: A Modular Benchmark for Humanoid Robot Safety</heading></a><br>
+      <heading>SPARK: Safe Protective and Assistive Robot Kit</heading></a><br>
       <b>Yifan Sun</b>, Rui Chen, Kai S Yun, Yikuan Fang, Sebin Jung, Feihan Li, Bowei Li, Weiye Zhao, Changliu Liu<br>
-      2025<br>
+      14th IFAC Symposium on Robotics (ROBOTICS), 2025<br>
       </p>
 
       <div class="paper" id="spark">
@@ -153,10 +214,10 @@
       <p align="justify"> <i id="spark_abs">This paper introduces the Safe Protective and Assistive Robot Kit (SPARK), a comprehensive benchmark designed to ensure safety in humanoid autonomy and teleoperation. Humanoid robots pose significant safety risks due to their physical capabilities of interacting with complex environments. The physical structures of humanoid robots further add complexity to the design of general safety solutions. To facilitate safe deployment of complex robot systems, SPARK can be used as a toolbox that comes with state-of-the-art safe control algorithms in a modular and composable robot control framework. Users can easily configure safety criteria and sensitivity levels to optimize the balance between safety and performance. To accelerate humanoid safety research and development, SPARK provides simulation benchmarks that compare safety approaches in a variety of environments, tasks, and robot models. Furthermore, SPARK allows quick deployment of synthesized safe controllers on real robots. For hardware deployment, SPARK supports Apple Vision Pro (AVP) or a Motion Capture System as external sensors, while offering interfaces for seamless integration with alternative hardware setups at the same time. This paper demonstrates SPARK's capability with both simulation experiments and case studies with a Unitree G1 humanoid robot. Leveraging these advantages of SPARK, users and researchers can significantly improve the safety of their humanoid systems as well as accelerate relevant research. The open source code is available at: https://github.com/intelligent-control-lab/spark.</i></p>
 
       <pre xml:space="preserve">
-        @article{sun2025spark,
-          title={SPARK: A Modular Benchmark for Humanoid Robot Safety},
+        @inproceedings{sun2025spark,
+          title={SPARK: Safe Protective and Assistive Robot Kit},
           author={Sun, Yifan and Chen, Rui and Yun, Kai S and Fang, Yikuan and Jung, Sebin and Li, Feihan and Li, Bowei and Zhao, Weiye and Liu, Changliu},
-          journal={arXiv preprint arXiv:2502.03132},
+          booktitle={IFAC Symposium on Robotics},
           year={2025}
         }
       </pre>
@@ -168,7 +229,7 @@
   <tr>
     <td width="40%" valign="top" align="center">
       <a href="https://arxiv.org/pdf/2502.02858">
-          <img src="images/dexterous/dexterous.gif" alt="sym" width="100%" style="padding-top:0px; padding-bottom:0px; border-radius:15px; height: auto;">
+          <img src="images/dexterous/dexterous.gif" alt="Dexterous safe control demonstration with a humanoid robot" width="100%" style="padding-top:0px; padding-bottom:0px; border-radius:15px; height: auto;">
       </a>
     </td>
     <td width="60%" valign="top">
@@ -202,14 +263,14 @@
   <tr>
     <td width="40%" valign="top" align="center">
       <a href="https://arxiv.org/pdf/2506.06567">
-          <img src="images/wbcd/wbcd.gif" alt="sym" width="100%" style="padding-top:0px; padding-bottom:0px; border-radius:15px; height: auto;">
+          <img src="images/wbcd/wbcd.gif" alt="NeSyPack bimanual logistics packing demonstration" width="100%" style="padding-top:0px; padding-bottom:0px; border-radius:15px; height: auto;">
       </a>
     </td>
     <td width="60%" valign="top">
       <p><a href="https://arxiv.org/pdf/2506.06567" id="WBCD">
       <heading>NeSyPack: A Neuro-Symbolic Framework for Bimanual Logistics Packing</heading></a><br>
       Bowei Li, Peiqi Yu, Zhenran Tang, Han Zhou, <b>Yifan Sun</b>, Ruixuan Liu, Changliu Liu<br>
-      2025<br>
+      RSS 2025 Workshop on Benchmarking Robot Manipulation: Improving Interoperability and Modularity, 2025<br>
       </p>
 
       <div class="paper" id="wbcd">
@@ -221,10 +282,10 @@
       <p align="justify"> <i id="wbcd_abs">This paper presents NeSyPack, a neuro-symbolic framework for bimanual logistics packing. NeSyPack combines data-driven models and symbolic reasoning to build an explainable hierarchical system that is generalizable, data-efficient, and reliable. It decomposes a task into subtasks via hierarchical reasoning, and further into atomic skills managed by a symbolic skill graph. The graph selects skill parameters, robot configurations, and task-specific control strategies for execution. This modular design enables robustness, adaptability, and efficient reuse - outperforming end-to-end models that require large-scale retraining. Using NeSyPack, our team won the First Prize in the What Bimanuals Can Do (WBCD) competition at the 2025 IEEE International Conference on Robotics and Automation.</i></p>
 
       <pre xml:space="preserve">
-        @article{li2025nesypack,
+        @inproceedings{li2025nesypack,
           title={NeSyPack: A Neuro-Symbolic Framework for Bimanual Logistics Packing},
           author={Li, Bowei and Yu, Peiqi and Tang, Zhenran and Zhou, Han and Sun, Yifan and Liu, Ruixuan and Liu, Changliu},
-          journal={arXiv preprint arXiv:2506.06567},
+          booktitle={RSS 2025 Workshop on Benchmarking Robot Manipulation: Improving Interoperability and Modularity},
           year={2025}
         }
       </pre>
@@ -236,14 +297,14 @@
   <tr>
     <td width="40%" valign="top" align="center">
       <a href="https://arxiv.org/pdf/2411.14321">
-          <img src="images/koopman/koopman.png" alt="sym" width="100%" style="padding-top:0px; padding-bottom:0px; border-radius:15px; height: auto;">
+          <img src="images/koopman/koopman.gif" alt="Continual Koopman learning for legged robot control" width="100%" style="padding-top:0px; padding-bottom:0px; border-radius:15px; height: auto;">
       </a>
     </td>
     <td width="60%" valign="top">
       <p><a href="https://arxiv.org/pdf/2411.14321" id="KOOPMAN">
       <heading>Continual Learning and Lifting of Koopman Dynamics for Linear Control of Legged Robots</heading></a><br>
       Feihan Li, Abulikemu Abuduweili, <b>Yifan Sun</b>, Rui Chen, Weiye Zhao, Changliu Liu<br>
-      Learning for Dynamics & Control Conference (L4DC), 2025<br>
+      Learning for Dynamics &amp; Control Conference (L4DC), 2025<br>
       </p>
 
       <div class="paper" id="koopman">
@@ -270,14 +331,14 @@
   <tr>
     <td width="40%" valign="top" align="center">
       <a href="https://arxiv.org/pdf/2308.13140">
-          <img src="images/s3po/s3po.png" alt="sym" width="100%" style="padding-top:0px; padding-bottom:0px; border-radius:15px; height: auto;">
+          <img src="images/s3po/s3po.png" alt="Safe reinforcement learning results for S3PO" width="100%" style="padding-top:0px; padding-bottom:0px; border-radius:15px; height: auto;">
       </a>
     </td>
     <td width="60%" valign="top">
       <p><a href="https://arxiv.org/pdf/2308.13140" id="S3PO">
       <heading>Learn with imagination: Safe set guided state-wise constrained policy optimization</heading></a><br>
       <b>Yifan Sun</b>*, Feihan Li*, Weiye Zhao*, Rui Chen, Tianhao Wei, Changliu Liu<br>
-      Learning for Dynamics & Control Conference (L4DC), 2025<br>
+      Learning for Dynamics &amp; Control Conference (L4DC), 2025<br>
       </p>
 
       <div class="paper" id="s3po">
@@ -303,7 +364,7 @@
   <tr>
     <td width="40%" valign="top" align="center">
       <a href="https://arxiv.org/pdf/2309.02354">
-          <img src="images/lego_manipulation/lego_manipulation.gif" alt="sym" width="100%" style="padding-top:0px; padding-bottom:0px; border-radius:15px; height: auto;">
+          <img src="images/lego_manipulation/lego_manipulation.gif" alt="Industrial robot manipulating LEGO bricks" width="100%" style="padding-top:0px; padding-bottom:0px; border-radius:15px; height: auto;">
       </a>
     </td>
     <td width="60%" valign="top">
@@ -340,13 +401,13 @@
   <tr>
     <td width="40%" valign="top" align="center">
       <a href="https://arxiv.org/pdf/2410.01212?">
-          <img src="images/ascpo/ascpo.png" alt="sym" width="100%" style="padding-top:0px; padding-bottom:0px; border-radius:15px; height: auto;">
+          <img src="images/ascpo/ascpo.png" alt="ASCPO safe reinforcement learning results" width="100%" style="padding-top:0px; padding-bottom:0px; border-radius:15px; height: auto;">
       </a>
     </td>
     <td width="60%" valign="top">
       <p><a href="https://arxiv.org/pdf/2410.01212?" id="ASCPO">
       <heading>Absolute State-wise Constrained Policy Optimization: High-Probability State-wise Constraints Satisfaction</heading></a><br>
-      Weiye Zhao*, Feihan Li*, <b>Yifan Sun</b>, Yujie Yang, Rui Chen, Tianhao Wei, Changliu Liu<br>
+      Weiye Zhao*, Feihan Li*, <b>Yifan Sun</b>, Yujie Wang, Rui Chen, Tianhao Wei, Changliu Liu<br>
       2024<br>
       </p>
 
@@ -373,7 +434,7 @@
   <tr>
     <td width="40%" valign="top" align="center">
       <a href="https://openreview.net/pdf?id=Ss3h1ixJAU">
-          <img src="images/apo/apo.png" alt="sym" width="100%" style="padding-top:0px; padding-bottom:0px; border-radius:15px; height: auto;">
+          <img src="images/apo/apo.png" alt="Absolute Policy Optimization performance results" width="100%" style="padding-top:0px; padding-bottom:0px; border-radius:15px; height: auto;">
       </a>
     </td>
     <td width="60%" valign="top">
@@ -386,7 +447,7 @@
       <div class="paper" id="apo">
       <a href="javascript:toggleblock('apo_abs')">abstract</a> |
       <a shape="rect" href="javascript:togglebib('apo')" class="togglebib">bibtex</a> |
-      <a href="https://openreview.net/pdf?id=Ss3h1ixJAU">arXiv</a> 
+      <a href="https://openreview.net/pdf?id=Ss3h1ixJAU">paper</a>
 
       <p align="justify"> <i id="apo_abs">In recent years, trust region on-policy reinforcement learning has achieved impressive results in addressing complex control tasks and gaming scenarios. However, contemporary state-of-the-art algorithms within this category primarily emphasize improvement in expected performance, lacking the ability to control over the worst-case performance outcomes. To address this limitation, we introduce a novel objective function, optimizing which leads to guaranteed monotonic improvement in the lower probability bound of performance with high confidence. Building upon this groundbreaking theoretical advancement, we further introduce a practical solution called Absolute Policy Optimization (APO). Our experiments demonstrate the effectiveness of our approach across challenging continuous control benchmark tasks and extend its applicability to mastering Atari games. Our findings reveal that APO as well as its efficient variation Proximal Absolute Policy Optimization (PAPO) significantly outperforms state-of-the-art policy gradient algorithms, resulting in substantial improvements in worst-case performance, as well as expected performance.</i></p>
 
@@ -405,13 +466,13 @@
   <tr>
     <td width="40%" valign="top" align="center">
       <a href="https://arxiv.org/pdf/2306.12594">
-          <img src="images/scpo/scpo.png" alt="sym" width="100%" style="padding-top:0px; padding-bottom:0px; border-radius:15px; height: auto;">
+          <img src="images/scpo/scpo.png" alt="State-wise Constrained Policy Optimization results" width="100%" style="padding-top:0px; padding-bottom:0px; border-radius:15px; height: auto;">
       </a>
     </td>
     <td width="60%" valign="top">
       <p><a href="https://arxiv.org/pdf/2306.12594" id="SCPO">
       <heading>State-wise Constrained Policy Optimization</heading></a><br>
-      Weiye Zhao, Rui Chen, <b>Yifan Sun</b>, Tianhao Wei, Changliu Liu<br>
+      Weiye Zhao, Rui Chen, <b>Yifan Sun</b>, Feihan Li, Tianhao Wei, Changliu Liu<br>
       Transactions on Machine Learning Research (TMLR), 2024<br>
       </p>
 
@@ -425,7 +486,7 @@
       <pre xml:space="preserve">
         @article{zhao2023state,
           title={State-wise constrained policy optimization},
-          author={Zhao, Weiye and Chen, Rui and Sun, Yifan and Wei, Tianhao and Liu, Changliu},
+          author={Zhao, Weiye and Chen, Rui and Sun, Yifan and Li, Feihan and Wei, Tianhao and Liu, Changliu},
           journal={arXiv preprint arXiv:2306.12594},
           year={2023}
         }
@@ -438,7 +499,7 @@
   <tr>
     <td width="40%" valign="top" align="center">
       <a href="https://arxiv.org/pdf/2305.13681">
-          <img src="images/guard/guard.png" alt="sym" width="100%" style="padding-top:0px; padding-bottom:0px; border-radius:15px; height: auto;">
+          <img src="images/guard/guard.png" alt="GUARD safe reinforcement learning benchmark environments" width="100%" style="padding-top:0px; padding-bottom:0px; border-radius:15px; height: auto;">
       </a>
     </td>
     <td width="60%" valign="top">
@@ -472,12 +533,12 @@
   <tr>
     <td width="40%" valign="top" align="center">
       <a href="https://arxiv.org/pdf/2304.09260">
-          <img src="images/htcp/htcp.png" alt="sym" width="100%" style="padding-top:0px; padding-bottom:0px; border-radius:15px; height: auto;">
+          <img src="images/htcp/htcp.png" alt="Robot motion planning in a confined environment" width="100%" style="padding-top:0px; padding-bottom:0px; border-radius:15px; height: auto;">
       </a>
     </td>
     <td width="60%" valign="top">
       <p><a href="https://arxiv.org/pdf/2304.09260" id="HTCP">
-      <heading>Hybrid Task Constrained Planner for Robot Manipulator in Confined Environment</heading></a><br>
+      <heading>Hybrid Task Constrained Incremental Planner for Robot Manipulators in Confined Environments</heading></a><br>
       <b>Yifan Sun</b>, Weiye Zhao, Changliu Liu<br>
       American Control Conference (ACC) 2024<br>
       </p>
@@ -507,7 +568,7 @@
   <tr>
     <td width="40%" valign="top" align="center">
       <a href="https://arxiv.org/pdf/2305.15667">
-          <img src="images/lego2dlfd/lego2dlfd.png" alt="sym" width="100%" style="padding-top:0px; padding-bottom:0px; border-radius:15px; height: auto;">
+          <img src="images/lego2dlfd/lego2dlfd.png" alt="Robotic LEGO assembly from human demonstration" width="100%" style="padding-top:0px; padding-bottom:0px; border-radius:15px; height: auto;">
       </a>
     </td>
     <td width="60%" valign="top">
@@ -541,7 +602,7 @@
   <tr>
     <td width="40%" valign="top" align="center">
       <a href="https://ieeexplore.ieee.org/document/9863251">
-          <img src="images/jpc/jpc.gif" alt="sym" width="100%" style="padding-top:0px; padding-bottom:0px; border-radius:15px; height: auto;">
+          <img src="images/jpc/jpc.gif" alt="Interactive industrial robot using a jerk-bounded controller" width="100%" style="padding-top:0px; padding-bottom:0px; border-radius:15px; height: auto;">
       </a>
     </td>
     <td width="60%" valign="top">
@@ -555,7 +616,7 @@
       <a href="https://www.youtube.com/watch?v=bha6pHhytZA">youtube</a> |
       <a href="javascript:toggleblock('jpc_abs')">abstract</a> |
       <a shape="rect" href="javascript:togglebib('jpc')" class="togglebib">bibtex</a> |
-      <a href="https://ieeexplore.ieee.org/document/9863251">arXiv</a> 
+      <a href="https://ieeexplore.ieee.org/document/9863251">paper</a>
 
       <p align="justify"> <i id="jpc_abs">Industrial robots are widely used in many applications with structured and deterministic environments. However, the contemporary need requires industrial robots to intelligently operate in dynamic environments. It is challenging to design a safe and efficient robotic system with industrial robots in a dynamic environment for several reasons. First, most industrial robots require the input to have specific formats, which takes additional efforts to convert from task-level user commands. Second, existing robot drivers do not support overwriting ongoing tasks in real-time, which hinders the robot from responding to the dynamic environment. Third, most industrial robots only expose motion-level control, making it challenging to enforce dynamic constraints during trajectory tracking. To resolve the above challenges, this paper presents a jerk-bounded position control driver (JPC) for industrial robots. JPC provides a unified interface for tracking complex trajectories and is able to enforce dynamic constraints using motion-level control, without accessing servo-level control. Most importantly, JPC enables real-time trajectory modification. Users can overwrite the ongoing task with a new one without violating dynamic constraints. The proposed JPC is implemented and tested on the FANUC LR Mate 200id/7L robot with both artificially generated data and an interactive robot handover task. Experiments show that the proposed JPC can track complex trajectories accurately within dynamic limits and seamlessly switch to new trajectory references before the ongoing task ends.</i></p>
 
@@ -572,86 +633,31 @@
       </div>
     </td>
   </tr>
+      </table>
 
-  <table width="30%" align="center" border="0" cellspacing="0" cellpadding="20">
-    <tbody>
-        <tr>
-            <td style="padding:0px">
-                <br>
-                <br>
-                <div>
-                  <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=j7pCFMS--HyWHJq-O4KWye7muE9ye6LmWaKOF2-16g0"></script>
-                </div>
-            </td>
-        </tr>
-    </tbody>
-  </table>
+      <div class="no-results" id="no-results" hidden>
+        <span aria-hidden="true">⌕</span>
+        <p>No publications match this search.</p>
+        <button type="button" id="clear-filters">Clear filters</button>
+      </div>
+    </section>
 
+    <aside class="visitor-card" aria-label="Visitor map">
+      <div>
+        <h2>Visitors from around the world</h2>
+        <p>The original site had a live visitor globe. It stays here as a reminder that personal websites can still feel personal.</p>
+      </div>
+      <div class="visitor-globe">
+        <script type="text/javascript" id="clstr_globe" src="https://clustrmaps.com/globe.js?d=j7pCFMS--HyWHJq-O4KWye7muE9ye6LmWaKOF2-16g0"></script>
+      </div>
+    </aside>
+  </main>
 
+  <footer class="site-footer">
+    <p>© <span id="current-year">2026</span> Yifan Sun</p>
+  </footer>
 
-
-
-<hr/>
-
-<table width="100%" align="center" border="0" cellspacing="0" cellpadding="2">
-    <tr><td><br><p align="right">
-    Website template from <a href="http://www.cs.berkeley.edu/~barron/">here</a>,  <a href="http://www.cs.cmu.edu/~dpathak/">here</a> and <a href="https://tairanhe.com/">here</a>
-    </font></p></td></tr>
-</table>
-
-  </td></tr>
-</table>
-<script xml:space="preserve" language="JavaScript">
-hideallbibs();
-</script>
-<script xml:space="preserve" language="JavaScript">
-  hideblock('spark_abs');
-</script>
-<script xml:space="preserve" language="JavaScript">
-  hideblock('dexterous_abs');
-</script>
-<script xml:space="preserve" language="JavaScript">
-  hideblock('wbcd_abs');
-</script>
-<script xml:space="preserve" language="JavaScript">
-  hideblock('koopman_abs');
-</script>
-<script xml:space="preserve" language="JavaScript">
-  hideblock('s3po_abs');
-</script>
-<script xml:space="preserve" language="JavaScript">
-  hideblock('lego_manipulation_abs');
-</script>
-<script xml:space="preserve" language="JavaScript">
-  hideblock('ascpo_abs');
-</script>
-<script xml:space="preserve" language="JavaScript">
-  hideblock('apo_abs');
-</script>
-<script xml:space="preserve" language="JavaScript">
-  hideblock('scpo_abs');
-</script>
-<script xml:space="preserve" language="JavaScript">
-  hideblock('guard_abs');
-</script>
-<script xml:space="preserve" language="JavaScript">
-  hideblock('htcp_abs');
-</script>
-<script xml:space="preserve" language="JavaScript">
-  hideblock('lego2dlfd_abs');
-</script>
-<script xml:space="preserve" language="JavaScript">
-  hideblock('jpc_abs');
-</script>
-<script xml:space="preserve" language="JavaScript">
-  hideblock('maniploco_abs');
-</script>
-<script xml:space="preserve" language="JavaScript">
-  hideblock('parkour_abs');
-</script>
-<script xml:space="preserve" language="JavaScript">
-  hideblock('mobile_aloha_abs');
-</script>
+  <button class="back-to-top" id="back-to-top" type="button" aria-label="Back to top">↑</button>
 </body>
 
 </html>

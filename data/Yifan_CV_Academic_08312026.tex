@@ -1,0 +1,304 @@
+\documentclass[11pt,letterpaper,palatine]{moderncv}
+
+\moderncvstyle{banking}
+\moderncvcolor{blue}
+\nopagenumbers{}
+
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[utf8]{inputenc}
+\else
+  \usepackage{fontspec}
+  \setmainfont{P052}
+\fi
+\usepackage[scale=0.91]{geometry}
+\usepackage{tabularx}
+\usepackage{etoolbox}
+
+\name{Yifan Sun}{}
+\newcommand*{\myname}{\textbf{Y. Sun}}
+
+\newcommand*{\cventryclean}[5]{%
+  \noindent
+  \begin{tabular*}{\maincolumnwidth}{@{\extracolsep{\fill}}lr}
+    {\bfseries #1} & {\bfseries #2} \\
+    {\itshape #3} & {\itshape #4}
+  \end{tabular*}
+  \ifstrempty{#5}{}{%
+    \begin{minipage}{\maincolumnwidth}
+      \small #5
+    \end{minipage}}
+  \par\addvspace{0.55em}}
+
+\newcommand*{\cvpublication}[5]{%
+  \noindent
+  \begin{minipage}{\maincolumnwidth}
+    \textbf{#1.} \href{#2}{\textbf{#3}}
+    \par\vspace{0.05em}
+    {\leftskip=1.35em\itshape #4\par}
+    {\leftskip=1.35em #5\par}
+  \end{minipage}
+  \par\addvspace{0.48em}}
+
+\newcommand*{\cvactivity}[4]{%
+  \noindent
+  \begin{tabularx}{\maincolumnwidth}{@{}Xr@{}}
+    {\bfseries #1} & {\bfseries #2} \\
+    {\itshape #3} & {\itshape #4}
+  \end{tabularx}
+  \par\addvspace{0.45em}}
+
+\begin{document}
+
+\makecvtitle
+\vspace*{-13mm}
+\begin{center}
+  \begin{tabular}{c c c c}
+    \faEnvelope\enspace
+    \underline{\href{mailto:yifansu2@andrew.cmu.edu}{yifansu2@andrew.cmu.edu}}
+    & \faHome\enspace
+    \underline{\href{https://yifansun98.github.io/}{https://yifansun98.github.io}}
+    & \faGithub\enspace
+    \underline{\href{https://github.com/YIFANSUN98}{GitHub}}
+    & \faLink\enspace
+    \underline{\href{https://www.linkedin.com/in/yifansun1/}{LinkedIn}}
+  \end{tabular}
+\end{center}
+
+\section{EDUCATION}
+
+\cventryclean
+  {Carnegie Mellon University}
+  {Pittsburgh, PA}
+  {Ph.D. in Robotics; Advisor: \href{https://www.ri.cmu.edu/ri-faculty/changliu-liu/}{Prof. Changliu Liu}}
+  {Sept. 2024--Present}
+  {\textbf{Research interests:} safe planning, learning, and control; humanoid safety and whole-body control; dexterous manipulation; safe human--robot interaction.}
+
+\cventryclean
+  {Carnegie Mellon University}
+  {Pittsburgh, PA}
+  {M.S. in Mechanical Engineering--Research; GPA: 3.98/4.0}
+  {Sept. 2021--May 2023}
+  {\textbf{Selected coursework:} planning and decision-making in robotics, deep reinforcement learning for robot decision-making, robot localization and mapping, machine learning, and engineering optimization.}
+
+\cventryclean
+  {Xi'an Jiaotong University}
+  {Xi'an, China}
+  {B.S. in Mechanical Engineering; GPA: 3.87/4.3}
+  {Sept. 2016--June 2020}
+  {\textbf{Selected coursework:} computer systems, microcomputer principles and interfaces, and intelligent control.}
+
+\section{RESEARCH STATEMENT}
+
+My research develops intelligent decision-making and motion-control methods that enable complex robotic systems---especially humanoids---to operate safely in dynamic, contact-rich environments. I study scalable safety analysis, safe learning and control, and dexterous whole-body interaction, with applications to human--robot collaboration and industrial automation.
+
+\section{PUBLICATIONS}
+
+\textbf{CONFERENCE PAPERS}
+
+\cvpublication
+  {C1}
+  {https://arxiv.org/abs/2603.22703}
+  {Learning Safe-Stoppability Monitors for Humanoid Robots}
+  {\myname, Y. Pan, S. Li, C. Ding, T. Cui, L. Wang, and C. Liu}
+  {IEEE/RSJ International Conference on Intelligent Robots and Systems (\textbf{IROS}), 2026.}
+
+\cvpublication
+  {C2}
+  {https://arxiv.org/abs/2502.03132}
+  {SPARK: Safe Protective and Assistive Robot Kit}
+  {\myname, R. Chen, K. S. Yun, Y. Fang, S. Jung, F. Li, B. Li, W. Zhao, and C. Liu}
+  {14th IFAC Symposium on Robotics (\textbf{ROBOTICS}), 2025.}
+
+\cvpublication
+  {C3}
+  {https://proceedings.mlr.press/v283/li25b.html}
+  {Continual Learning and Lifting of Koopman Dynamics for Linear Control of Legged Robots}
+  {F. Li, A. Abuduweili, \myname, R. Chen, W. Zhao, and C. Liu}
+  {7th Annual Learning for Dynamics \& Control Conference (\textbf{L4DC}), PMLR 283:136--148, 2025.}
+
+\cvpublication
+  {C4}
+  {https://arxiv.org/abs/2308.13140}
+  {Learn With Imagination: Safe Set Guided State-wise Constrained Policy Optimization}
+  {\myname\textsuperscript{*}, F. Li\textsuperscript{*}, W. Zhao\textsuperscript{*}, R. Chen, T. Wei, and C. Liu}
+  {Learning for Dynamics \& Control Conference (\textbf{L4DC}), 2025.}
+
+\cvpublication
+  {C5}
+  {https://openreview.net/forum?id=Ss3h1ixJAU}
+  {Absolute Policy Optimization: Enhancing Lower Probability Bound of Performance with High Confidence}
+  {W. Zhao\textsuperscript{*}, F. Li\textsuperscript{*}, \myname, R. Chen, T. Wei, and C. Liu}
+  {International Conference on Machine Learning (\textbf{ICML}), 2024.}
+
+\cvpublication
+  {C6}
+  {https://arxiv.org/abs/2304.09260}
+  {Hybrid Task Constrained Incremental Planner for Robot Manipulators in Confined Environments}
+  {\myname, W. Zhao, and C. Liu}
+  {American Control Conference (\textbf{ACC}), 2024.}
+
+\cvpublication
+  {C7}
+  {https://arxiv.org/abs/2309.02354}
+  {A Lightweight and Transferable Design for Robust LEGO Manipulation}
+  {R. Liu, \myname, and C. Liu}
+  {International Symposium on Flexible Automation (\textbf{ISFA}), 2024.}
+
+\cvpublication
+  {C8}
+  {https://ieeexplore.ieee.org/document/9863251}
+  {Jerk-bounded Position Controller with Real-Time Task Modification for Interactive Industrial Robots}
+  {R. Liu, R. Chen, \myname, Y. Zhao, and C. Liu}
+  {IEEE/ASME International Conference on Advanced Intelligent Mechatronics (\textbf{AIM}), 2022.}
+
+\textbf{JOURNAL PAPERS}
+
+\cvpublication
+  {J1}
+  {https://openreview.net/forum?id=NgK5etmhz9}
+  {State-wise Constrained Policy Optimization}
+  {W. Zhao, R. Chen, \myname, F. Li, T. Wei, and C. Liu}
+  {Transactions on Machine Learning Research (\textbf{TMLR}), 2024.}
+
+\cvpublication
+  {J2}
+  {https://openreview.net/forum?id=kZFKwApeQO}
+  {GUARD: A Safe Reinforcement Learning Benchmark}
+  {W. Zhao\textsuperscript{*}, \myname\textsuperscript{*}, F. Li, R. Chen, R. Liu, T. Wei, and C. Liu}
+  {Transactions on Machine Learning Research (\textbf{TMLR}), 2024.}
+
+\textbf{WORKSHOP PAPERS}
+
+\cvpublication
+  {W1}
+  {https://openreview.net/forum?id=6KcewDz76A}
+  {Calibrating AI Trust in Complementary Human--AI Collaboration}
+  {H. Hu, \myname, and C. Liu}
+  {ICRA Workshop on Public Trust in Autonomous Systems, 2025.}
+
+\cvpublication
+  {W2}
+  {https://arxiv.org/abs/2506.06567}
+  {NeSyPack: A Neuro-Symbolic Framework for Bimanual Logistics Packing}
+  {B. Li, P. Yu, Z. Tang, H. Zhou, \myname, R. Liu, and C. Liu}
+  {RSS Workshop on Benchmarking Robot Manipulation: Improving Interoperability and Modularity, 2025.}
+
+\cvpublication
+  {W3}
+  {https://arxiv.org/abs/2305.15667}
+  {Robotic LEGO Assembly and Disassembly from Human Demonstration}
+  {R. Liu, \myname, and C. Liu}
+  {ACC Workshop on Recent Advancement of Human Autonomy Interaction and Integration, 2023.}
+
+\textbf{PREPRINTS}
+
+\cvpublication
+  {P1}
+  {https://arxiv.org/abs/2606.16022}
+  {$\lambda$-Reachability: Geometric-Horizon Safety Bellman Equations for Humanoid Safety}
+  {R. Chen, S. Li, \myname, and C. Liu}
+  {arXiv:2606.16022, 2026.}
+
+\cvpublication
+  {P2}
+  {https://arxiv.org/abs/2601.14880}
+  {Contingency Planning for Safety-Critical Autonomous Vehicles: A Review and Perspectives}
+  {L. Zheng, L. Zhang, P. Yu, \myname, S. Grammatico, J. Ma, and C. Liu}
+  {arXiv:2601.14880, 2026.}
+
+\cvpublication
+  {P3}
+  {https://arxiv.org/abs/2502.02858}
+  {Dexterous Safe Control for Humanoids in Cluttered Environments via Projected Safe Set Algorithm}
+  {R. Chen, \myname, and C. Liu}
+  {arXiv:2502.02858, 2025.}
+
+\cvpublication
+  {P4}
+  {https://arxiv.org/abs/2410.01212}
+  {Absolute State-wise Constrained Policy Optimization: High-Probability State-wise Constraints Satisfaction}
+  {W. Zhao, F. Li, \myname, Y. Wang, R. Chen, T. Wei, and C. Liu}
+  {arXiv:2410.01212, 2024.}
+
+{\small\textsuperscript{*}Equal contribution.}
+
+\section{EXPERIENCE}
+
+\cventryclean
+  {Intelligent Control Lab, Robotics Institute, Carnegie Mellon University}
+  {Pittsburgh, PA}
+  {Research Assistant}
+  {Sept. 2021--Present}
+  {Develop novel methods for safe planning, learning, and control for humanoid and industrial robotic systems using \textbf{C++}, \textbf{Python}, \textbf{ROS/ROS 2}, \textbf{MuJoCo}, and \textbf{Isaac Sim}.}
+
+\cventryclean
+  {\href{https://www.instinct-robotics.com/}{Instinct Robotics, Inc.}}
+  {Pittsburgh, PA}
+  {Robotics Research Intern}
+  {May 2025--Aug. 2025}
+  {Developed \textbf{ROS 2} modules, simulation infrastructure, and motion-planning algorithms for industrial grinding pipelines under physical and dynamic constraints.}
+
+\cventryclean
+  {Siemens, Inc. $\vert$ Future of Automation Team}
+  {Princeton, NJ}
+  {Automation Runtime Systems Intern}
+  {July 2023--Oct. 2023}
+  {Developed an \textbf{AR}-enhanced, real-time human--robot collaboration system integrating \textbf{Apple Vision Pro} with industrial robots through Siemens' industrial network middleware, \textbf{OIE}.}
+
+\cventryclean
+  {Zoox, Inc. $\vert$ Motion Planning and Control Team}
+  {Foster City, CA}
+  {Software Engineer Intern}
+  {May 2022--Aug. 2022}
+  {Delivered a new collision-avoidance feature for autonomous vehicles using \textbf{C++}, \textbf{Protocol Buffers}, \textbf{Bazel}, and \textbf{GTest}; evaluated it on more than \textbf{7,000 miles} of driving data.}
+
+\section{SKILLS}
+
+\begin{tabularx}{\maincolumnwidth}{@{}>{\bfseries}l@{\hspace{3ex}}X@{}}
+  Programming: & C/C++, Python, MATLAB, Swift, Java \\
+  Robotics and ML: & ROS/ROS 2, PyTorch, Isaac Sim, MuJoCo, Gazebo, Webots \\
+  Tools: & Git, Bazel, Protocol Buffers, GTest, SolidWorks \\
+  Expertise: & robot planning and control, safe reinforcement learning, reachability and safety analysis, humanoid whole-body control, dexterous manipulation, human--robot interaction
+\end{tabularx}
+
+\section{ACADEMIC SERVICE}
+
+\begin{tabularx}{\maincolumnwidth}{@{}>{\bfseries}l@{\hspace{3ex}}X@{}}
+  Conference reviewer: & NeurIPS 2025; ICRA 2026 \\
+  Journal reviewer: & IEEE Robotics and Automation Letters (RA-L); IEEE Transactions on Industrial Electronics (T-IE)
+\end{tabularx}
+
+\section{PROFESSIONAL ACTIVITIES}
+
+\cvactivity
+  {Demo: ``Real-Time Safe Control for Human--Humanoid Interaction''}
+  {Nov. 2025}
+  {XRTC Symposium}
+  {Pittsburgh, PA}
+
+\cvactivity
+  {Presentation: ``SHARE: Safe Human--Robot Interaction under Augmented Reality Environment''}
+  {May 2025}
+  {Northeast Systems and Control Workshop}
+  {New York City, NY}
+
+\cvactivity
+  {Presentation: ``Automatic Polishing of Complex Surfaces by Real-Time Planning and Control''}
+  {Nov. 2023}
+  {Pittsburgh Robotics Discovery Day}
+  {Pittsburgh, PA}
+
+\section{HONORS AND AWARDS}
+
+\begin{tabularx}{\maincolumnwidth}{@{}Xr@{}}
+  \textbf{First Prize, What Bimanuals Can Do (WBCD) Competition, IEEE ICRA} & 2025 \\
+  Outstanding Graduate & 2020 \\
+  Outstanding Student Leader & 2019 \\
+  Robot Skills World Champion, VEX Robotics World Championship & 2019 \\
+  First Prize Scholarship (top 5\%) & 2019 \\
+  National Scholarship (top 1\%) & 2018 \\
+  National Scholarship (top 1\%) & 2017
+\end{tabularx}
+
+\end{document}
