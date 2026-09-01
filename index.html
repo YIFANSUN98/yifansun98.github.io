@@ -23,6 +23,7 @@
     }
   </script>
   <script src="js/site.js" defer></script>
+  <script src="js/visitor-globe.js" defer></script>
   <!-- Start : Google Analytics Code -->
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -642,15 +643,22 @@
       </div>
     </section>
 
-    <aside class="visitor-card" aria-label="Visitor map">
-      <div>
-        <h2>Visitors from around the world</h2>
+    <aside class="visitor-card" aria-label="Interactive visitor map">
+      <div class="visitor-intro">
+        <h2>Visitors around the world</h2>
+        <div class="visitor-summary" aria-live="polite">
+          <span><strong id="visitor-total">—</strong> <span id="visitor-label">visitors</span></span>
+          <span><strong id="visitor-country-total">—</strong> <span id="visitor-country-label">countries</span></span>
+        </div>
+        <div class="visitor-actions">
+          <a class="visitor-stats-link" href="https://info.flagcounter.com/vTsZ" target="_blank" rel="noopener">Detailed statistics <span aria-hidden="true">↗</span></a>
+          <img class="visitor-counter-badge" src="https://s01.flagcounter.com/mini/vTsZ/bg_FFFFFF/txt_344054/border_D0D5DD/flags_0/" alt="Flag Counter page-view total" width="160" height="20" loading="lazy" decoding="async">
+        </div>
       </div>
-      <div class="visitor-map">
-        <a class="visitor-map-image" href="https://info.flagcounter.com/vTsZ" target="_blank" rel="noopener" aria-label="Open detailed visitor statistics">
-          <img src="https://s01.flagcounter.com/map/vTsZ/size_m/txt_344054/border_D0D5DD/pageviews_1/viewers_0/flags_0/" alt="Live map of visitors by country">
-        </a>
-        <a class="visitor-stats-link" href="https://info.flagcounter.com/vTsZ" target="_blank" rel="noopener">View detailed visitor statistics <span aria-hidden="true">↗</span></a>
+      <div class="visitor-globe-panel" id="visitor-globe-panel">
+        <canvas id="visitor-globe" width="460" height="460" tabindex="0" aria-label="Interactive globe showing visitor countries. Drag or use the arrow keys to rotate."></canvas>
+        <div class="visitor-globe-tooltip" id="visitor-globe-tooltip" role="status" hidden></div>
+        <span class="visitor-globe-help">Drag to rotate</span>
       </div>
     </aside>
   </main>

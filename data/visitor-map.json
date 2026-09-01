@@ -1,0 +1,14 @@
+{
+  "updatedAt": "2026-09-01T00:47:35Z",
+  "totalVisitors": 2,
+  "countries": [
+    {
+      "code": "US",
+      "name": "United States",
+      "latitude": 36.0,
+      "longitude": -97.0,
+      "visitors": 2,
+      "lastVisit": "September 1, 2026"
+    }
+  ]
+}
