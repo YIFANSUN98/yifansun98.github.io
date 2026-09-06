@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-05T16:04:11Z",
-  "totalVisitors": 21,
+  "updatedAt": "2026-09-06T17:02:14Z",
+  "totalVisitors": 22,
   "countries": [
     {
       "code": "US",
@@ -17,6 +17,14 @@
       "longitude": 105.0,
       "visitors": 1,
       "lastVisit": "September 3, 2026"
+    },
+    {
+      "code": "IL",
+      "name": "Israel",
+      "latitude": 32.0,
+      "longitude": 35.0,
+      "visitors": 1,
+      "lastVisit": "September 6, 2026"
     }
   ]
 }
