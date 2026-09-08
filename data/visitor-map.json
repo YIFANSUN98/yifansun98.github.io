@@ -1,13 +1,13 @@
 {
-  "updatedAt": "2026-09-08T04:34:58Z",
-  "totalVisitors": 28,
+  "updatedAt": "2026-09-08T14:31:59Z",
+  "totalVisitors": 30,
   "countries": [
     {
       "code": "US",
       "name": "United States",
       "latitude": 36.0,
       "longitude": -97.0,
-      "visitors": 26,
+      "visitors": 27,
       "lastVisit": "September 8, 2026"
     },
     {
@@ -25,6 +25,14 @@
       "longitude": 35.0,
       "visitors": 1,
       "lastVisit": "September 6, 2026"
+    },
+    {
+      "code": "RS",
+      "name": "Serbia",
+      "latitude": 44.0,
+      "longitude": 21.0,
+      "visitors": 1,
+      "lastVisit": "September 8, 2026"
     }
   ]
 }
