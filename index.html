@@ -164,12 +164,12 @@
       <p><a href="https://arxiv.org/pdf/2606.16022" id="LAMBDA_REACHABILITY">
       <heading>&lambda;-Reachability: Geometric-Horizon Safety Bellman Equations for Humanoid Safety</heading></a><br>
       Rui Chen, Shangtao Li, <b>Yifan Sun</b>, Changliu Liu<br>
-      Preprint, 2026<br>
+      Conference on Robot Learning (CoRL), 2026<br>
       </p>
 
       <div class="paper" id="lambda_reachability">
-      <a href="https://icontrol.ri.cmu.edu/research/humanoid.html#lambda-reachability">project</a> |
-      <a href="https://shangtaoli.github.io/project/lambda_reach/video.mp4">video</a> |
+      <a href="https://intelligent-control-lab.github.io/lambda_reach/">project</a> |
+      <a href="https://www.youtube.com/watch?v=sW9JjJ73NJ4">youtube</a> |
       <a href="https://github.com/intelligent-control-lab/lambda_reach">code</a> |
       <a href="javascript:toggleblock('lambda_reachability_abs')">abstract</a> |
       <a shape="rect" href="javascript:togglebib('lambda_reachability')" class="togglebib">bibtex</a> |
@@ -178,13 +178,18 @@
       <p align="justify"> <i id="lambda_reachability_abs">We introduce &lambda;-Reachability, a scalable approach to Hamilton--Jacobi safety analysis for high-dimensional robotic systems. Unlike prior discounted formulations that rely on fixed one-step Bellman updates, &lambda;-Reachability employs a stochastic multi-step estimator of the safety value, using a geometrically distributed rollout horizon together with a randomly absorbed terminal. Conceptually analogous to TD(&lambda;), &lambda;-Reachability interpolates between local self-consistency updates and long-horizon max-over-trajectory safety targets via an interpretable horizon-control parameter. Unlike TD(&lambda;), where the terminal value is always incorporated in learning targets, the terminal safety value in &lambda;-Reachability is only used at a probability controlled by parameter &delta;. We formally show that for &delta;&lt;1, the update induces a contraction mapping that allows temporal-difference learning; as &lambda;&rarr;1, the estimator recovers the undiscounted reachability objective. We apply &lambda;-Reachability to high-dimensional safety learning problems with both simulated and real humanoid robots under balance and collision avoidance constraints. Experimental results demonstrate that &lambda;-Reachability significantly improves both safe-set boundary classification and safety margin estimation compared to single-step temporal-difference baselines.</i></p>
 
       <pre xml:space="preserve">
-        @misc{chen2026lambdareachability,
-          title={{\lambda}-Reachability: Geometric-Horizon Safety Bellman Equations for Humanoid Safety},
+        @inproceedings{chen2026lambdareachability,
+          title={$\lambda$-Reachability: Geometric-Horizon Safety Bellman Equations for Humanoid Safety},
           author={Chen, Rui and Li, Shangtao and Sun, Yifan and Liu, Changliu},
+          booktitle={Conference on Robot Learning},
           year={2026},
           eprint={2606.16022},
           archivePrefix={arXiv},
-          primaryClass={cs.RO}
+          primaryClass={cs.RO},
+          url={https://arxiv.org/abs/2606.16022},
+          website={https://intelligent-control-lab.github.io/lambda_reach/},
+          youtube={https://www.youtube.com/watch?v=sW9JjJ73NJ4},
+          code={https://github.com/intelligent-control-lab/lambda_reach}
         }
       </pre>
       </div>
