@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-14T18:38:20Z",
-  "totalVisitors": 35,
+  "updatedAt": "2026-09-14T22:30:41Z",
+  "totalVisitors": 36,
   "countries": [
     {
       "code": "US",
@@ -17,6 +17,14 @@
       "longitude": 105.0,
       "visitors": 3,
       "lastVisit": "September 13, 2026"
+    },
+    {
+      "code": "CA",
+      "name": "Canada",
+      "latitude": 51.0,
+      "longitude": -102.0,
+      "visitors": 1,
+      "lastVisit": "September 14, 2026"
     },
     {
       "code": "IL",
