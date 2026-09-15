@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-14T22:30:41Z",
-  "totalVisitors": 36,
+  "updatedAt": "2026-09-15T13:32:51Z",
+  "totalVisitors": 37,
   "countries": [
     {
       "code": "US",
@@ -17,6 +17,14 @@
       "longitude": 105.0,
       "visitors": 3,
       "lastVisit": "September 13, 2026"
+    },
+    {
+      "code": "BE",
+      "name": "Belgium",
+      "latitude": 50.5,
+      "longitude": 4.0,
+      "visitors": 1,
+      "lastVisit": "September 15, 2026"
     },
     {
       "code": "CA",
