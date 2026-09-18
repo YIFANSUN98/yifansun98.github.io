@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-18T00:18:38Z",
-  "totalVisitors": 40,
+  "updatedAt": "2026-09-18T18:28:25Z",
+  "totalVisitors": 41,
   "countries": [
     {
       "code": "US",
@@ -49,6 +49,14 @@
       "longitude": 21.0,
       "visitors": 1,
       "lastVisit": "September 8, 2026"
+    },
+    {
+      "code": "CH",
+      "name": "Switzerland",
+      "latitude": 47.0,
+      "longitude": 8.0,
+      "visitors": 1,
+      "lastVisit": "September 18, 2026"
     }
   ]
 }
