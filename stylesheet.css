@@ -709,6 +709,49 @@ input:focus-visible {
   background: var(--surface-strong);
 }
 
+.service-section {
+  padding-bottom: 110px;
+}
+
+.service-groups {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(32px, 5vw, 62px);
+  margin-top: 34px;
+}
+
+.service-group h3 {
+  margin: 0 0 16px;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.service-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.service-list li {
+  padding: 16px 0;
+  border-top: 1px solid var(--line);
+}
+
+.service-venue {
+  display: block;
+  color: var(--ink-soft);
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.service-details {
+  display: block;
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 0.83rem;
+  font-variant-numeric: tabular-nums;
+}
+
 .visitor-card {
   display: grid;
   grid-template-columns: minmax(250px, 1fr) minmax(360px, 460px);
@@ -1000,6 +1043,11 @@ input:focus-visible {
     margin-top: 30px;
   }
 
+  .service-groups {
+    grid-template-columns: 1fr;
+    margin-top: 30px;
+  }
+
   .filter-group {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -1062,7 +1110,8 @@ input:focus-visible {
     flex: 1 1 auto;
   }
 
-  .publication-section {
+  .publication-section,
+  .service-section {
     padding-bottom: 80px;
   }
 
