@@ -20,10 +20,11 @@ concurrency:
 
 jobs:
   update:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
     steps:
       - name: Check out website
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Refresh visitor-country totals
         run: python3 scripts/update_visitor_map.py
