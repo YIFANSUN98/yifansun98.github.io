@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-10T07:06:03Z",
-  "totalVisitors": 84,
+  "updatedAt": "2026-10-10T13:40:43Z",
+  "totalVisitors": 85,
   "countries": [
     {
       "code": "US",
@@ -16,6 +16,14 @@
       "latitude": 32.0,
       "longitude": 105.0,
       "visitors": 13,
+      "lastVisit": "October 10, 2026"
+    },
+    {
+      "code": "JP",
+      "name": "Japan",
+      "latitude": 36.0,
+      "longitude": 138.0,
+      "visitors": 2,
       "lastVisit": "October 10, 2026"
     },
     {
@@ -57,14 +65,6 @@
       "longitude": 35.0,
       "visitors": 1,
       "lastVisit": "September 6, 2026"
-    },
-    {
-      "code": "JP",
-      "name": "Japan",
-      "latitude": 36.0,
-      "longitude": 138.0,
-      "visitors": 1,
-      "lastVisit": "September 26, 2026"
     },
     {
       "code": "RS",
