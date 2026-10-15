@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-14T23:13:28Z",
-  "totalVisitors": 91,
+  "updatedAt": "2026-10-15T22:16:48Z",
+  "totalVisitors": 92,
   "countries": [
     {
       "code": "US",
@@ -65,6 +65,14 @@
       "longitude": 35.0,
       "visitors": 1,
       "lastVisit": "September 6, 2026"
+    },
+    {
+      "code": "PK",
+      "name": "Pakistan",
+      "latitude": 30.0,
+      "longitude": 70.0,
+      "visitors": 1,
+      "lastVisit": "October 15, 2026"
     },
     {
       "code": "RS",
