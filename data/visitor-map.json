@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-15T22:16:48Z",
-  "totalVisitors": 92,
+  "updatedAt": "2026-10-16T11:23:11Z",
+  "totalVisitors": 96,
   "countries": [
     {
       "code": "US",
@@ -15,8 +15,8 @@
       "name": "China",
       "latitude": 32.0,
       "longitude": 105.0,
-      "visitors": 13,
-      "lastVisit": "October 10, 2026"
+      "visitors": 17,
+      "lastVisit": "October 16, 2026"
     },
     {
       "code": "JP",
