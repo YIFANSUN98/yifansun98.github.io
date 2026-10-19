@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import html
 import json
+import os
 import re
 import time
 from datetime import datetime, timezone
@@ -16,6 +17,10 @@ from urllib.request import Request, urlopen
 SOURCE_URL = "https://s01.flagcounter.com/gmap/vTsZ/"
 OUTPUT_PATH = Path(__file__).resolve().parents[1] / "data" / "visitor-map.json"
 FETCH_ATTEMPTS = 3
+
+
+class SourceUnavailable(RuntimeError):
+    """The provider responded without usable visitor data."""
 
 MARKER_PATTERN = re.compile(
     r"iconUrl:\s*'[^']*/flags/(?P<code>[a-z]{2})\.png'.*?"
@@ -36,8 +41,11 @@ def fetch_source() -> str:
     for attempt in range(1, FETCH_ATTEMPTS + 1):
         try:
             with urlopen(request, timeout=30) as response:
-                return response.read().decode("utf-8", errors="replace")
-        except (URLError, TimeoutError, ConnectionError) as error:
+                source = response.read().decode("utf-8", errors="replace")
+            if not parse_countries(source):
+                raise SourceUnavailable("Flag Counter returned no visitor-country markers")
+            return source
+        except (URLError, TimeoutError, ConnectionError, SourceUnavailable) as error:
             # Configuration errors such as a missing page should still fail the job.
             if isinstance(error, HTTPError) and error.code not in (408, 429) and error.code < 500:
                 raise
@@ -76,19 +84,24 @@ def parse_countries(source: str) -> list[dict[str, object]]:
 def main() -> None:
     try:
         source = fetch_source()
-    except (URLError, TimeoutError, ConnectionError) as error:
+        countries = parse_countries(source)
+        if not countries:
+            raise SourceUnavailable("Flag Counter returned no visitor-country markers")
+    except (URLError, TimeoutError, ConnectionError, SourceUnavailable) as error:
         if isinstance(error, HTTPError) and error.code not in (408, 429) and error.code < 500:
             raise
         # Only tolerate an outage when usable data is already available to the globe.
         existing = json.loads(OUTPUT_PATH.read_text(encoding="utf-8")) if OUTPUT_PATH.exists() else {}
         if not existing.get("countries") or not existing.get("totalVisitors"):
             raise
-        print(f"::warning::Flag Counter unavailable after {FETCH_ATTEMPTS} attempts; "
-              f"keeping visitor data from {existing.get('updatedAt', 'an earlier update')}. {error}")
+        message = (f"Flag Counter unavailable or returned unusable data; "
+                   f"keeping visitor data from {existing.get('updatedAt', 'an earlier update')}. {error}")
+        print(f"::warning::{message}")
+        if summary_path := os.environ.get("GITHUB_STEP_SUMMARY"):
+            with open(summary_path, "a", encoding="utf-8") as summary:
+                summary.write(f"### Visitor refresh deferred\n\n{message}\n\n"
+                              "The existing globe data is unchanged. The next scheduled run will retry.\n")
         return
-    countries = parse_countries(source)
-    if not countries:
-        raise RuntimeError("Flag Counter returned no visitor-country markers; existing data was not overwritten.")
 
     total_visitors = sum(int(country["visitors"]) for country in countries)
     if OUTPUT_PATH.exists():
