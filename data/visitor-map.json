@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-19T06:15:50Z",
-  "totalVisitors": 101,
+  "updatedAt": "2026-10-19T19:55:52Z",
+  "totalVisitors": 102,
   "countries": [
     {
       "code": "US",
@@ -27,6 +27,14 @@
       "lastVisit": "October 17, 2026"
     },
     {
+      "code": "CA",
+      "name": "Canada",
+      "latitude": 51.0,
+      "longitude": -102.0,
+      "visitors": 2,
+      "lastVisit": "October 19, 2026"
+    },
+    {
       "code": "SE",
       "name": "Sweden",
       "latitude": 62.0,
@@ -41,14 +49,6 @@
       "longitude": 4.0,
       "visitors": 1,
       "lastVisit": "September 15, 2026"
-    },
-    {
-      "code": "CA",
-      "name": "Canada",
-      "latitude": 51.0,
-      "longitude": -102.0,
-      "visitors": 1,
-      "lastVisit": "September 14, 2026"
     },
     {
       "code": "IN",
