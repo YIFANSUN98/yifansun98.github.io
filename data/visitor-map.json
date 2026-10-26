@@ -1,14 +1,14 @@
 {
-  "updatedAt": "2026-10-26T13:01:48Z",
-  "totalVisitors": 109,
+  "updatedAt": "2026-10-26T19:18:22Z",
+  "totalVisitors": 111,
   "countries": [
     {
       "code": "US",
       "name": "United States",
       "latitude": 36.0,
       "longitude": -97.0,
-      "visitors": 75,
-      "lastVisit": "October 22, 2026"
+      "visitors": 77,
+      "lastVisit": "October 26, 2026"
     },
     {
       "code": "CN",
