@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-22T18:32:09Z",
-  "totalVisitors": 108,
+  "updatedAt": "2026-10-26T13:01:48Z",
+  "totalVisitors": 109,
   "countries": [
     {
       "code": "US",
@@ -49,6 +49,14 @@
       "longitude": 4.0,
       "visitors": 1,
       "lastVisit": "September 15, 2026"
+    },
+    {
+      "code": "DE",
+      "name": "Germany",
+      "latitude": 51.0,
+      "longitude": 9.0,
+      "visitors": 1,
+      "lastVisit": "October 26, 2026"
     },
     {
       "code": "IN",
