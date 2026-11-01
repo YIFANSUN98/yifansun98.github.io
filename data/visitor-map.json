@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-31T15:44:00Z",
-  "totalVisitors": 128,
+  "updatedAt": "2026-11-01T18:55:50Z",
+  "totalVisitors": 129,
   "countries": [
     {
       "code": "US",
@@ -89,6 +89,14 @@
       "longitude": 21.0,
       "visitors": 1,
       "lastVisit": "September 8, 2026"
+    },
+    {
+      "code": "KR",
+      "name": "South Korea",
+      "latitude": 37.0,
+      "longitude": 127.3,
+      "visitors": 1,
+      "lastVisit": "November 1, 2026"
     },
     {
       "code": "CH",
