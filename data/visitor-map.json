@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-11-04T21:52:17Z",
-  "totalVisitors": 141,
+  "updatedAt": "2026-11-07T14:00:59Z",
+  "totalVisitors": 142,
   "countries": [
     {
       "code": "US",
@@ -57,6 +57,14 @@
       "longitude": 9.0,
       "visitors": 1,
       "lastVisit": "October 26, 2026"
+    },
+    {
+      "code": "HK",
+      "name": "Hong Kong",
+      "latitude": 22.15,
+      "longitude": 114.1,
+      "visitors": 1,
+      "lastVisit": "November 7, 2026"
     },
     {
       "code": "IN",
