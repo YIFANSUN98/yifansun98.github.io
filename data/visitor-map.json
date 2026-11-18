@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-11-18T04:19:20Z",
-  "totalVisitors": 159,
+  "updatedAt": "2026-11-18T13:57:12Z",
+  "totalVisitors": 160,
   "countries": [
     {
       "code": "US",
@@ -113,6 +113,14 @@
       "longitude": 8.0,
       "visitors": 1,
       "lastVisit": "September 18, 2026"
+    },
+    {
+      "code": "VN",
+      "name": "Vietnam",
+      "latitude": 16.0,
+      "longitude": 108.0,
+      "visitors": 1,
+      "lastVisit": "November 18, 2026"
     }
   ]
 }
