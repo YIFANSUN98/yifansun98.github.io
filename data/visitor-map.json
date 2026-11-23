@@ -1,14 +1,14 @@
 {
-  "updatedAt": "2026-11-22T11:24:37Z",
-  "totalVisitors": 173,
+  "updatedAt": "2026-11-23T09:03:12Z",
+  "totalVisitors": 175,
   "countries": [
     {
       "code": "US",
       "name": "United States",
       "latitude": 36.0,
       "longitude": -97.0,
-      "visitors": 125,
-      "lastVisit": "November 21, 2026"
+      "visitors": 126,
+      "lastVisit": "November 23, 2026"
     },
     {
       "code": "CN",
@@ -49,6 +49,14 @@
       "longitude": 4.0,
       "visitors": 1,
       "lastVisit": "September 15, 2026"
+    },
+    {
+      "code": "FR",
+      "name": "France",
+      "latitude": 46.0,
+      "longitude": 2.0,
+      "visitors": 1,
+      "lastVisit": "November 23, 2026"
     },
     {
       "code": "DE",
