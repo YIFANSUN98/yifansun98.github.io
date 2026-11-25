@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-11-25T02:26:33Z",
-  "totalVisitors": 181,
+  "updatedAt": "2026-11-25T12:52:39Z",
+  "totalVisitors": 182,
   "countries": [
     {
       "code": "US",
@@ -23,8 +23,8 @@
       "name": "Japan",
       "latitude": 36.0,
       "longitude": 138.0,
-      "visitors": 4,
-      "lastVisit": "November 24, 2026"
+      "visitors": 5,
+      "lastVisit": "November 25, 2026"
     },
     {
       "code": "CA",
